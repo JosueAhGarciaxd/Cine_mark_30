@@ -1,0 +1,637 @@
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #1e201e;
+  background-color: #ffffff;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+/* Componente Title */
+.title {
+  margin-bottom: 1rem;
+  color: #1e201e;
+}
+
+.title.welcome-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #3c3d37;
+  margin-bottom: 0.5rem;
+}
+
+.title.organization-title {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #697565;
+  margin-bottom: 1.5rem;
+}
+
+.title.dashboard-title {
+  font-size: 2rem;
+  color: #1e201e;
+}
+
+.title.organization-subtitle {
+  font-size: 1.2rem;
+  color: #697565;
+  margin-bottom: 2rem;
+}
+
+/* Componente Button */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(30, 32, 30, 0.1);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-primary {
+  background-color: #3c3d37;
+  color: #ecdfcc;
+}
+
+.btn-primary:hover {
+  background-color: #1e201e;
+}
+
+.btn-secondary {
+  background-color: #697565;
+  color: #ecdfcc;
+}
+
+.btn-secondary:hover {
+  background-color: #3c3d37;
+}
+
+.btn-danger {
+  background-color: #697565;
+  color: #ecdfcc;
+}
+
+.btn-danger:hover {
+  background-color: #3c3d37;
+}
+
+/* Componente Card */
+.card {
+  background: #ecdfcc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(30, 32, 30, 0.1);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #697565;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(30, 32, 30, 0.15);
+}
+
+.card-clickable {
+  cursor: pointer;
+}
+
+/* Componente Message */
+.message {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.message-success {
+  background-color: rgba(105, 117, 101, 0.2);
+  color: #1e201e;
+  border: 1px solid #697565;
+}
+
+.message-error {
+  background-color: rgba(60, 61, 55, 0.2);
+  color: #1e201e;
+  border: 1px solid #3c3d37;
+}
+
+.message-warning {
+  background-color: rgba(236, 223, 204, 0.8);
+  color: #1e201e;
+  border: 1px solid #697565;
+}
+
+.message-info {
+  background-color: rgba(105, 117, 101, 0.1);
+  color: #1e201e;
+  border: 1px solid #697565;
+}
+
+.message-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: inherit;
+  padding: 0;
+  margin-left: 1rem;
+}
+
+/* Página de Bienvenida */
+.welcome-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #3c3d37 0%, #1e201e 100%);
+  padding: 1rem;
+}
+
+.welcome-container {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-card {
+  text-align: center;
+  background: rgba(236, 223, 204, 0.95);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 100%;
+}
+
+.welcome-description {
+  font-size: 1.1rem;
+  color: #3c3d37;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.welcome-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.proceed-button {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+}
+
+.auto-redirect {
+  font-size: 0.9rem;
+  color: #697565;
+  font-style: italic;
+}
+
+/* Página Principal/Dashboard */
+.home-page {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-actions {
+  margin-bottom: 3rem;
+}
+
+.action-card {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.action-card p {
+  color: #697565;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.events-section {
+  margin-top: 3rem;
+}
+
+.events-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.events-count {
+  background: #3c3d37;
+  color: #ecdfcc;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Estilos para las tarjetas de eventos */
+.event-card {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid #3c3d37;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 25px rgba(30, 32, 30, 0.15);
+}
+
+.event-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.event-title {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #1e201e;
+  flex: 1;
+}
+
+.event-type {
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.event-type.virtual {
+  background: rgba(105, 117, 101, 0.2);
+  color: #3c3d37;
+}
+
+.event-type.presencial {
+  background: rgba(236, 223, 204, 0.8);
+  color: #1e201e;
+}
+
+.event-card-body {
+  margin-bottom: 1.5rem;
+}
+
+.event-location,
+.event-description {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  color: #697565;
+}
+
+.event-location strong,
+.event-description strong {
+  color: #1e201e;
+}
+
+.event-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-card-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  border-top: 1px solid #697565;
+  padding-top: 1rem;
+}
+
+.event-card-actions .btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* Estados especiales */
+.loading-card {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: #697565;
+  background: linear-gradient(45deg, #ecdfcc, rgba(105, 117, 101, 0.1));
+  border: 2px dashed #697565;
+}
+
+.empty-state-card {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: #697565;
+  background: linear-gradient(
+    135deg,
+    rgba(60, 61, 55, 0.1),
+    rgba(30, 32, 30, 0.1)
+  );
+  border: 2px dashed #3c3d37;
+}
+
+.empty-state-card h3 {
+  color: #3c3d37;
+  margin-bottom: 1rem;
+}
+
+.empty-state-card p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Estilos del formulario */
+.event-form-card {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.form-title {
+  text-align: center;
+  color: #1e201e;
+  margin-bottom: 2rem;
+}
+
+.event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #1e201e;
+  font-size: 0.95rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  padding: 0.75rem;
+  border: 2px solid #697565;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
+  background-color: #ecdfcc;
+  color: #1e201e;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #3c3d37;
+  box-shadow: 0 0 0 3px rgba(60, 61, 55, 0.1);
+}
+
+.form-input-error {
+  border-color: #697565;
+}
+
+.form-input-error:focus {
+  border-color: #697565;
+  box-shadow: 0 0 0 3px rgba(105, 117, 101, 0.1);
+}
+
+.form-error {
+  color: #3c3d37;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #697565;
+}
+
+.form-actions .btn {
+  min-width: 120px;
+}
+
+/* Responsive Design */
+
+/* Pantallas grandes (Desktop) */
+@media (min-width: 1200px) {
+  .home-container {
+    padding: 2rem;
+  }
+
+  .events-grid {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+  }
+
+  .welcome-container {
+    max-width: 600px;
+  }
+
+  .action-card {
+    max-width: 700px;
+  }
+}
+
+/* Pantallas medianas (Laptop) */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .home-container {
+    padding: 2rem 3rem;
+    max-width: 9000px;
+  }
+
+  .events-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .welcome-container {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  .welcome-card {
+    margin: 0 auto;
+  }
+
+  .action-card {
+    max-width: 650px;
+  }
+
+  .button-group {
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .events-header {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .home-container {
+    padding: 1.5rem 2rem;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .button-group {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .btn {
+    flex: 1;
+    min-width: 140px;
+    max-width: 200px;
+  }
+
+  .welcome-card {
+    margin: 1rem auto;
+  }
+
+  .welcome-container {
+    margin: 0 auto;
+  }
+
+  .title.welcome-title {
+    font-size: 2.2rem;
+  }
+
+  .title.dashboard-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .welcome-card {
+    margin: 1rem auto;
+  }
+
+  .welcome-container {
+    margin: 0 auto;
+  }
+
+  .title.welcome-title {
+    font-size: 1.8rem;
+    /* Ajuste para móviles */
+  }
+
+  .title.dashboard-title {
+    font-size: 1.5rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .home-container {
+    padding: 1rem;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-description {
+    font-size: 0.9rem;
+    /* Ajuste para móviles */
+  }
+
+  .proceed-button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .home-page {
+    padding: 1rem 0.5rem;
+  }
+}
